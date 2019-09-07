@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Beppi the Clown",
+      "imgName": "beppi-the-clown.jpg"
+    },
+    {
+      "name": "Cagney Carnation",
+      "imgName": "cagney-carnation.jpg"
+    },
+    {
+      "name": "Cala Maria",
+      "imgName": "cala-maria.jpg"
+    },
+    {
+        "name": "Djimmi the Great",
+        "imgName": "djimmi-the-great.jpg"
+    },
+    {
+        "name": "Dr Kahl's Robot",
+        "imgName": "dr-kahls-robot.jpg"
+    },
+    {
+        "name": "Phantom Express",
+        "imgName": "phantom-express.jpg"
+    },
+    {
+        "name": "Rumor Honeybottoms",
+        "imgName": "rumor-honeybottoms.jpg"
+    },
+    {
+        "name": "Wally Warbles",
+        "imgName": "wally-warbles.jpg"
+    },
+    {
+        "name": "Wener Werman",
+        "imgName": "werner-werman.jpg"
+    }
+  ]
