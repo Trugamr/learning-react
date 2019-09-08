@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { CardList } from './components/card-list/card-list.component'
-import './App.css';
+import { SearchBox } from './components/search-box/search-box.component' 
+
+import './App.scss';
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      bosses: []
+      bosses: [],
+      searchField: ''
     }
   }
 
@@ -17,9 +20,20 @@ class App extends Component {
   }
 
   render() {
+    // not modifying the state so that other components which require all of the bosses wont break
+    const filteredBosses = this.state.bosses.filter(({ name }) => {
+      return name
+              .toLowerCase()
+              .includes(this.state.searchField.toLowerCase())
+    }) 
+
     return (
       <div className='App'>
-      <CardList bosses={this.state.bosses} />
+      <SearchBox
+        handleChange={e => { this.setState({ searchField: e.target.value }) }}
+        placeholder={'Search'}
+      />
+      <CardList bosses={filteredBosses} />
       </div>
     );
   }
