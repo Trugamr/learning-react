@@ -14,9 +14,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/bosses.json')
+  fetch('/bosses.json')
       .then(response => response.json())
       .then(bosses => this.setState({ bosses }))
+  }
+
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value })
   }
 
   render() {
@@ -29,11 +33,12 @@ class App extends Component {
 
     return (
       <div className='App'>
-      <SearchBox
-        handleChange={e => { this.setState({ searchField: e.target.value }) }}
-        placeholder={'Search'}
-      />
-      <CardList bosses={filteredBosses} />
+        <h1>Cuphead Bosses</h1>
+        <SearchBox
+          handleChange={this.handleChange}
+          placeholder={'Search'}
+        />
+        <CardList bosses={filteredBosses} />
       </div>
     );
   }

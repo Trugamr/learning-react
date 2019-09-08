@@ -1,0 +1,15 @@
+input {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: ease all 0.2s;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 16px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    &:focus {
+        transform: scale(1.1);
+        outline: none;
+    }
+}

@@ -8,7 +8,7 @@ export const Card = ( { boss } ) => {
                 className="card-img" 
                 style={{ backgroundImage: `url('/images/${boss.imgName}')`}}
             ></div>
-            <h1 className="card-title">{ boss.name }</h1>
+            <h2 className="card-title">{ boss.name }</h2>
         </div>
     )
 }
